@@ -6,7 +6,12 @@ import { Component, OnInit, Output } from '@angular/core';
   template:`
   <div>
     <h1>Upcoming Angular Events</h1>
-    <events-thumbnail *ngFor="let oneEvent of events" [event]="oneEvent"></events-thumbnail>
+    <hr/>
+    <div class='row'>
+      <div *ngFor="let oneEvent of events" class='col-md-5'>
+        <events-thumbnail [event]="oneEvent"></events-thumbnail>
+      </div>
+    </div>
   </div>
   `
   // styleUrls: ['./events.component.css']
@@ -106,11 +111,11 @@ export class EventsListComponent implements OnInit {
       price: 950.00,
       imageUrl: '/assets/images/ng-nl.png',
       onlineUrl: 'http://ng-nl.org',
-      location: {
-        address: 'The Excalibur',
-        city: 'Las Vegas',
-        country: 'USA'
-      },
+      // location: {
+      //   address: 'The Excalibur',
+      //   city: 'Las Vegas',
+      //   country: 'USA'
+      // },
       sessions: [
         {
           id: 1,
